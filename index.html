@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Js</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css links -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+</head>
+<body>
+    <!-- text change -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to change the text</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="textChange()">Text Change</button> 
+        <h2 id="h2"></h2>      
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">oncontextmenu</h1> 
+        <button type="button" class="btn btn-dark my-2" oncontextmenu="textChange2()">oncontextmenu right-click-me</button> 
+        <h2 id="h2nd"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to change the text</h1> 
+        <button type="button" class="btn btn-dark my-2" ondblclick="textChange3()">ondblclick</button> 
+        <h2 id="h2rd"></h2>        
+    </div>
+
+    <!-- show date -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to show the date</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="showDate()">Show Date</button> 
+        <h2 id="dh2">Date</h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmouseleave</h1> 
+        <button type="button" class="btn btn-dark my-2" onmouseleave="showDate2()">Show Date</button> 
+        <h2 id="dh2nd">Date</h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmousemove</h1> 
+        <button type="button" class="btn btn-dark my-2" onmousemove="showDate3()">Show Date</button> 
+        <h2 id="dh2rd">Date</h2>        
+    </div>
+
+    <!-- variable repeat massage -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to repeat the massage</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="dataRepeat()">Repeat massage</button> 
+        <h2 id="dr"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmouseover</h1> 
+        <button type="button" class="btn btn-dark my-2" onmouseover="dataRepeat2()">Repeat massage</button> 
+        <h2 id="dr2"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmouseout</h1> 
+        <button type="button" class="btn btn-dark my-2" onmouseout="dataRepeat3()">Repeat massage</button> 
+        <h2 id="dr2rd"></h2>        
+    </div>
+
+    <!-- on/off -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to turn on/off bulb</h1> 
+        <button type="button" class="btn btn-success my-2" onclick="bulbOn()">On</button> 
+        <button type="button" class="btn btn-dark my-2" onclick="bulbOff()">Off</button> 
+        <img id="bulb" src="img/off.gif" alt="js">         
+    </div>
+
+
+    <!-- font-size -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to change the font size</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="fontSize()">Font Size</button> 
+        <h2 id="fs">Lorem ipsum dolor sit.</h2>         
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmouseenter font size</h1> 
+        <button type="button" class="btn btn-dark my-2" onmouseenter="fontSize2()">Font Size</button> 
+        <h2 id="fs2">Lorem ipsum dolor sit.</h2>         
+    </div>
+
+    <!-- show/hide -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to show or hide the text</h1> 
+        <button type="button" class="btn btn-success my-2" onclick="textShow()">Show</button> 
+        <button type="button" class="btn btn-dark my-2" onclick="textHide()">Hide</button> 
+        <h2 id=tsh>Lorem, ipsum dolor sit amet.</h2>         
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Addition function</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="outPut()">Result</button> 
+        <h2 id="op"></h2>         
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Subtraction function</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="subTract()">Result</button> 
+        <h2 id="sf"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Multiplication function</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="multiFun()">Multiply 7</button> 
+        <h2 id="multi"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Division Function</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="divideFun()">Divide 7</button> 
+        <h2 id="df"></h2>       
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">getElementByClassName</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="test()">Click me</button> 
+        <p class="p">Hello There!</p>       
+        <p class="p">Hello There!</p>       
+        <p class="p">Hello There!</p>       
+    </div>
+
+
+    <div class="container mt-5">
+        <form>  
+            Male: <input type="radio" name="gender" value="male">  
+            Female: <input type="radio" name="gender" value="female">  
+            <input type="button" onclick="totalElements()" value="Total Genders">  
+        </form>       
+    </div>
+
+    <div class="container mt-5">
+        <p>This is a paragraph</p>  
+        <p>Here we are going to count the total number of paragraphs using the getElementByTagName() method.</p>  
+        <p>Let's see the simple example</p>  
+        <button onclick="countPara()">Count Paragraphs</button>        
+    </div>
+
+    <div class="container mt-5">
+        <h2>This is h2 tag</h2>  
+        <h2>This is h2 tag</h2>  
+        <h3>This is h3 tag</h3>  
+        <h3>This is h3 tag</h3>  
+        <h3>This is h3 tag</h3>  
+
+        <button onclick="counth2()">Count h2</button>
+        <button onclick="counth3()">Count h3</button>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">getElementById</h1> 
+        <p>When you click on one of the buttons, a function will be called. The function will display the argument that is passed to it.</p>
+
+        <form> 
+          <input type="button" onclick="myfunction('Good Morning!')" value="In the Morning"> 
+          <input type="button" onclick="myfunction('Good Evening!')" value="In the Evening"> 
+        </form> 
+        
+        <p id="demo"></p>        
+    </div>
+
+
+
+    <div class="container mt-5">
+        <p>This is an example of adding multiple events to the same element.</p>
+        <p>Click the following button to see the effect.</p>
+        <button id="btn" class="mb-3">Click me</button>
+        <p id="para"></p>
+        <p id="para1"></p>        
+    </div>
+
+
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+   </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>
+   </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+
+    <!-- js links -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
